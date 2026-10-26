@@ -1,0 +1,780 @@
+{
+  "version": "2.0",
+  "created_at": "2026-03-06",
+  "description": "Golden dataset for PM Compass RAG evaluation. 50 queries across 7 categories, using RavenStack test documents with real Kaggle data (dates shifted +1 year). Replace REPLACE_WITH_* placeholders with real document_id values after indexing.",
+  "doc_id_map": {
+    "ROADMAP_2025": "1IFFem_m3ZYC0HqgRP44l-l70U69_FaNEZkSPpkZh5GU",
+    "ROADMAP_2024": "1vOCtyelxvPOAHGmyjzYMO5WhhIxCBk_tOa675ZAvB3I",
+    "COMPETITOR_ACME": "1xgkXyRkoRS1xnp8fMXnLW8X00DTdvwEbvQqHiecGPRo",
+    "COMPETITOR_NIMBUS": "1NhlGiudITCjm89bSoGxXoch-xJMbJB3XS55zf08hd0o",
+    "SYNC_NOV15": "1NI6hjMvgfeYpJWxRlIh3cPbIgOlZaZazN3lzINbtQeI",
+    "SYNC_DEC6": "18MumwC8huImSD1qlqf-FqqH7hSDov34RlCeWH0Sk5o0",
+    "SYNC_OCT4": "1hUijXr-VGgBMTOGqdJb8C3WRRbHHyV8g6WTpkD1LkeI",
+    "MRR_2025": "1TR0SQdI_1UUagPUD8MiWGvvqvaFWD4HHIiZMVeAqhHE",
+    "MRR_2024": "1ggagGDL6eBE6jB5hqaX_gXyfro3ua2DreKr6SkTZ34U",
+    "CHURN_Q3Q4": "1UX81RvQydpIZTQlAxSsvGRRZ23550j01xYbMOFWr3tg",
+    "CHURN_Q1Q2": "1MKRxpnRk2YVWquHzIxLGEZ_bqsqhzwCQF0mQSBEJiBM",
+    "FEATURE_ADOPTION": "1ap9K3RCYJk-Xd8_2grchL2z4kLJMNHp4E5qX9u6ICUI",
+    "BETA_FEATURES": "1D25sBy7wtQMpiuqVre4N_Cdlj5fk1uX1P5ABaYRm3KU",
+    "SUPPORT_2025": "1mDvAxo0IaUmZ5rQBMyiunWbvglJP7C1Bv69WlhFbu-c",
+    "SUPPORT_H1H2": "1wPTLooq-kCtMZhKhek0TvoLSb0odcvB_qBQjCfAf2wE",
+    "ACCT_SEGMENTATION": "1JF8fRdqP6YN0wEsH1b3DYdFt9-RARb-3vLo17I-5aL4",
+    "ENTERPRISE_DEEP_DIVE": "1wVxtMwE-OIrn_Rm6tj0ByW2z91BHjL65BDC1XCljtNY",
+    "TRIAL_CONVERSION": "1EnvZURanu8S4pmcvXUOhgXWaj5hEEgeurJWL1COIvtU",
+    "UX_ONBOARDING": "1S2T8I9cm17sz5OVPbnJkEVwAepE03EnF4xSRTJZJNQM",
+    "UX_POWER_USER": "15fG6_XOvxG2CHBYrv03sB5sOln2OqP1ZkDGc61M8cS0",
+    "UX_ENTERPRISE_PERSONAS": "1TdqFG48YTjWFPL7Ib2pyDlkNik68q-zB_Ei0yaGViRk",
+    "API_SPEC": "1MT6H_WO2TlWP0nFhoBUTB2zJzZB8zyFnxPx3XE--WPo",
+    "SMART_ALERTS_CHECKLIST": "1aHtZFQ73PoimpgCVRrmc87a2ROIBB4nrD-KLp0rytZI",
+    "DATA_EXPORT_PRD": "1hCeLvIUGYZXFmR5JngoAXkWanIkC8vj6Jjb-zSQ0Rzc",
+    "BOARD_DECK": "1mTLFWMhkX3WAPsBrn1KICu5yJtquCA4H-hAJNbtcu5M",
+    "QBR_Q3": "1KC36e6nWwfx5xHVUHE-olhCHY-EQIvJ1xjLNMpja1Qk",
+    "PRICING_REVIEW": "1o9yECHFx-kQy_Sam7hWczKbDIhh1aQPCjUkYiX7IN20",
+    "HEALTH_SCORE": "1zpU6wjy_0aIU0pq9VsnShWU9RmAs25lEmnSLU4AkqeU",
+    "NRR_ANALYSIS": "17i7gismezP8b5O_SI_vSjA3U1rz4B69pSt3vTLiKBeo",
+    "CHURN_INITIATIVE": "1KxKeS04AXhg3CbxwKSsgekgiUlh8qZ59EJj2RYkrtcA",
+    "ALLHANDS_DEC": "12Cef-r_CU8NbTWAuxT1QkK3HnI7YLusmU3UbnXeamhc",
+    "ALLHANDS_SEP": "1ueRHFuzCeIgHNMVFJP6i9ITBQ14nC5y0q4Mu_RY_LnM",
+    "ENG_OKRS": "1cdecipPO3F2gScqdqSOhboMGLN74IeaS37FL1fimq1w",
+    "DESIGN_SYSTEM": "1AbDV_k4KFp3lKRj2GB-JM9J2hmy_oCzD100MIvOPYDQ",
+    "CS_PLAYBOOK": "1V1PJokVLNGGl6HLvLFhtlXEt5HOSL7X2CdQHjX-98nA",
+    "BRAND_GUIDELINES": "1z4ZwSBJycNsYVL6vWTQF2MWdkCHsW7dhleVJjqv9R0g",
+    "SALES_OBJECTIONS": "1jZEydbJjZA9-CRqIK66A9cjBrhdk4tGRyJB_ErX4n8c",
+    "HIRING_PLAN": "1nCO1hFr-qU6hpVtggBCObDbtA1YIhqSHkcH5Q82rsPA",
+    "SNACK_BUDGET": "17PftEafQCfZf7I_Oq1msKmfNkahxCOEh0cAQAlE_YsE",
+    "MARKETING_Q4": "1_VFoE9ytC8n5vYbqAqv3RmApWmfgpF8pVLT1xeTAjDM",
+    "EMPLOYEE_SURVEY": "1DKBOBlBNVSKLFGDF2kaxxrGbuLQ-kZhH1MIpcxldDHI",
+    "SECURITY_CHECKLIST": "1HNbxoKzckTRN7TnWLp7eb4YREBamjb3sR1Iub6-pvJA",
+    "INVESTOR_FAQ": "1a_c2XOO1Is5W7b7ex9wz_kMpDMieY3S09SWu3Gu5bt4",
+    "PARTNER_PROGRAM": "1ouqApUHAz8eXhb88SnEu9kr5-ytfX7HlZ3p5ewH0O74",
+    "DEV_SETUP": "12GWgcksgP2pN_-wJTQA3aw-undOJD5EJnNSf4wBk0ig",
+    "HIKING_TRIP": "14WGRJGG02ap19ENoyfquWH1UTjrDWEKah6Eq1PmaOKg",
+    "FANTASY_FOOTBALL": "1iZZK-FNzdd4JNaAD9LqhmND9eDwdbq1TtqlGfWWMivI",
+    "SOURDOUGH": "14LqFUQwYBoDg0rf0fYU8G7qR37VdpcUnMTNQdNpf6rU",
+    "BOOK_CLUB": "194QNFjy6r3VTns7e-uqYUdkd9huPD22CY9Qdx1F0PPA",
+    "HOME_RENOVATION": "1Aej0RmaoSZWkOw5wFIAgynj899l0AmGONWQZ4hi-gB8"
+  },
+  "queries": [
+    {
+      "id": "q01",
+      "query": "Find the 2025 product roadmap",
+      "category": "exact_lookup",
+      "difficulty": "easy",
+      "expected_doc_ids": [
+        "1IFFem_m3ZYC0HqgRP44l-l70U69_FaNEZkSPpkZh5GU"
+      ],
+      "expected_answer_contains": [
+        "roadmap",
+        "2025"
+      ],
+      "notes": "Direct title match"
+    },
+    {
+      "id": "q02",
+      "query": "Show me the churn analysis",
+      "category": "exact_lookup",
+      "difficulty": "easy",
+      "expected_doc_ids": [
+        "1UX81RvQydpIZTQlAxSsvGRRZ23550j01xYbMOFWr3tg",
+        "1MKRxpnRk2YVWquHzIxLGEZ_bqsqhzwCQF0mQSBEJiBM"
+      ],
+      "expected_answer_contains": [
+        "churn"
+      ],
+      "notes": "Should find both churn analysis sheets"
+    },
+    {
+      "id": "q03",
+      "query": "Where is the competitor analysis for AcmeSaaS?",
+      "category": "exact_lookup",
+      "difficulty": "easy",
+      "expected_doc_ids": [
+        "1xgkXyRkoRS1xnp8fMXnLW8X00DTdvwEbvQqHiecGPRo"
+      ],
+      "expected_answer_contains": [
+        "AcmeSaaS"
+      ],
+      "notes": "Direct title/content match"
+    },
+    {
+      "id": "q04",
+      "query": "Find the API specification document",
+      "category": "exact_lookup",
+      "difficulty": "easy",
+      "expected_doc_ids": [
+        "1MT6H_WO2TlWP0nFhoBUTB2zJzZB8zyFnxPx3XE--WPo"
+      ],
+      "expected_answer_contains": [
+        "API",
+        "v2"
+      ],
+      "notes": "Direct title match to API Integration Spec v2"
+    },
+    {
+      "id": "q05",
+      "query": "Show me the Smart Alerts launch checklist",
+      "category": "exact_lookup",
+      "difficulty": "easy",
+      "expected_doc_ids": [
+        "1aHtZFQ73PoimpgCVRrmc87a2ROIBB4nrD-KLp0rytZI"
+      ],
+      "expected_answer_contains": [
+        "Smart Alerts",
+        "checklist"
+      ],
+      "notes": "Direct title match"
+    },
+    {
+      "id": "q06",
+      "query": "Find the Data Export PRD",
+      "category": "exact_lookup",
+      "difficulty": "easy",
+      "expected_doc_ids": [
+        "1hCeLvIUGYZXFmR5JngoAXkWanIkC8vj6Jjb-zSQ0Rzc"
+      ],
+      "expected_answer_contains": [
+        "Data Export"
+      ],
+      "notes": "Direct title match"
+    },
+    {
+      "id": "q07",
+      "query": "What was our MRR in October 2025?",
+      "category": "factual_extraction",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1TR0SQdI_1UUagPUD8MiWGvvqvaFWD4HHIiZMVeAqhHE"
+      ],
+      "expected_answer_contains": [
+        "1,173,608",
+        "1173608",
+        "1.17"
+      ],
+      "notes": "Oct 2025 total MRR = $1,173,608 from MRR Sheet"
+    },
+    {
+      "id": "q08",
+      "query": "What are AcmeSaaS's main product strengths?",
+      "category": "factual_extraction",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1xgkXyRkoRS1xnp8fMXnLW8X00DTdvwEbvQqHiecGPRo"
+      ],
+      "expected_answer_contains": [
+        "mobile",
+        "AI"
+      ],
+      "notes": "AcmeSaaS strengths include mobile experience and GA AI features"
+    },
+    {
+      "id": "q09",
+      "query": "What were the action items from the November 15 product-eng sync?",
+      "category": "factual_extraction",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1NI6hjMvgfeYpJWxRlIh3cPbIgOlZaZazN3lzINbtQeI"
+      ],
+      "expected_answer_contains": [
+        "AI Copilot",
+        "error rate"
+      ],
+      "notes": "Key action item: Jake to reduce AI Copilot error rate to <3%"
+    },
+    {
+      "id": "q10",
+      "query": "What API authentication methods does RavenStack support?",
+      "category": "factual_extraction",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1MT6H_WO2TlWP0nFhoBUTB2zJzZB8zyFnxPx3XE--WPo"
+      ],
+      "expected_answer_contains": [
+        "OAuth",
+        "API Key"
+      ],
+      "notes": "API spec lists OAuth 2.0 and API Keys for Enterprise"
+    },
+    {
+      "id": "q11",
+      "query": "What did users say about the onboarding experience?",
+      "category": "factual_extraction",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1S2T8I9cm17sz5OVPbnJkEVwAepE03EnF4xSRTJZJNQM"
+      ],
+      "expected_answer_contains": [
+        "45 minutes",
+        "overwhelmed"
+      ],
+      "notes": "Time-to-value is 45 min, users feel overwhelmed"
+    },
+    {
+      "id": "q12",
+      "query": "What's the current error rate for AI Copilot?",
+      "category": "factual_extraction",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1D25sBy7wtQMpiuqVre4N_Cdlj5fk1uX1P5ABaYRm3KU",
+        "1NI6hjMvgfeYpJWxRlIh3cPbIgOlZaZazN3lzINbtQeI",
+        "1IFFem_m3ZYC0HqgRP44l-l70U69_FaNEZkSPpkZh5GU"
+      ],
+      "expected_answer_contains": [
+        "7.2"
+      ],
+      "notes": "AI Copilot error rate is 7.2% across multiple docs"
+    },
+    {
+      "id": "q13",
+      "query": "How many Enterprise accounts does RavenStack have?",
+      "category": "factual_extraction",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1wVxtMwE-OIrn_Rm6tj0ByW2z91BHjL65BDC1XCljtNY",
+        "1JF8fRdqP6YN0wEsH1b3DYdFt9-RARb-3vLo17I-5aL4",
+        "1a_c2XOO1Is5W7b7ex9wz_kMpDMieY3S09SWu3Gu5bt4"
+      ],
+      "expected_answer_contains": [
+        "154"
+      ],
+      "notes": "154 Enterprise accounts — also in Investor FAQ"
+    },
+    {
+      "id": "q14",
+      "query": "What are the remaining items on the Smart Alerts launch checklist?",
+      "category": "factual_extraction",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1aHtZFQ73PoimpgCVRrmc87a2ROIBB4nrD-KLp0rytZI"
+      ],
+      "expected_answer_contains": [
+        "error rate",
+        "3%",
+        "Slack"
+      ],
+      "notes": "8 items unchecked including error rate below 3% and Slack integration"
+    },
+    {
+      "id": "q15",
+      "query": "What is our trial-to-paid conversion rate?",
+      "category": "factual_extraction",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1EnvZURanu8S4pmcvXUOhgXWaj5hEEgeurJWL1COIvtU"
+      ],
+      "expected_answer_contains": [
+        "100%"
+      ],
+      "notes": "100% trial-to-paid conversion rate"
+    },
+    {
+      "id": "q16",
+      "query": "What's the average customer satisfaction score for support?",
+      "category": "factual_extraction",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1mDvAxo0IaUmZ5rQBMyiunWbvglJP7C1Bv69WlhFbu-c"
+      ],
+      "expected_answer_contains": [
+        "3.98"
+      ],
+      "notes": "Average CSAT across 2025 is 3.98"
+    },
+    {
+      "id": "q17",
+      "query": "What is the proposed customer health score framework?",
+      "category": "factual_extraction",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1zpU6wjy_0aIU0pq9VsnShWU9RmAs25lEmnSLU4AkqeU"
+      ],
+      "expected_answer_contains": [
+        "feature engagement",
+        "support health"
+      ],
+      "notes": "4 components: feature engagement (40%), support health (25%), usage trend (20%), contract health (15%)"
+    },
+    {
+      "id": "q18",
+      "query": "What pricing options are being considered for churn reduction?",
+      "category": "factual_extraction",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1o9yECHFx-kQy_Sam7hWczKbDIhh1aQPCjUkYiX7IN20",
+        "1KxKeS04AXhg3CbxwKSsgekgiUlh8qZ59EJj2RYkrtcA"
+      ],
+      "expected_answer_contains": [
+        "annual",
+        "discount",
+        "30%"
+      ],
+      "notes": "Option C recommended: increase annual discount from 20% to 30%. Churn Initiative also has pricing proposals."
+    },
+    {
+      "id": "q19",
+      "query": "Which plan tier has the highest churn?",
+      "category": "tabular_statistical",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1UX81RvQydpIZTQlAxSsvGRRZ23550j01xYbMOFWr3tg",
+        "1MKRxpnRk2YVWquHzIxLGEZ_bqsqhzwCQF0mQSBEJiBM",
+        "1KxKeS04AXhg3CbxwKSsgekgiUlh8qZ59EJj2RYkrtcA"
+      ],
+      "expected_answer_contains": [
+        "features",
+        "budget"
+      ],
+      "notes": "Churn is by reason code not tier. Top reasons: features (114), support (104), budget (104)"
+    },
+    {
+      "id": "q20",
+      "query": "What was the MRR growth from January to December 2025?",
+      "category": "tabular_statistical",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1TR0SQdI_1UUagPUD8MiWGvvqvaFWD4HHIiZMVeAqhHE"
+      ],
+      "expected_answer_contains": [
+        "273",
+        "2,273",
+        "8.3x"
+      ],
+      "notes": "$273K → $2,273K, 8.3x growth"
+    },
+    {
+      "id": "q21",
+      "query": "Compare H1 and H2 2025 support ticket volumes",
+      "category": "tabular_statistical",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1wPTLooq-kCtMZhKhek0TvoLSb0odcvB_qBQjCfAf2wE"
+      ],
+      "expected_answer_contains": [
+        "490",
+        "518"
+      ],
+      "notes": "H1: 490 tickets, H2: 518 tickets (+5.7%)"
+    },
+    {
+      "id": "q22",
+      "query": "What are the top 3 most used features in 2025?",
+      "category": "tabular_statistical",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1ap9K3RCYJk-Xd8_2grchL2z4kLJMNHp4E5qX9u6ICUI"
+      ],
+      "expected_answer_contains": [
+        "Inbox Zero",
+        "Notification Center",
+        "Integrations Hub"
+      ],
+      "notes": "Top 3: Inbox Zero (3,606), Notification Center (3,463), Integrations Hub (3,457)"
+    },
+    {
+      "id": "q23",
+      "query": "How many churn events happened in Q4 2025?",
+      "category": "tabular_statistical",
+      "difficulty": "easy",
+      "expected_doc_ids": [
+        "1UX81RvQydpIZTQlAxSsvGRRZ23550j01xYbMOFWr3tg",
+        "1KxKeS04AXhg3CbxwKSsgekgiUlh8qZ59EJj2RYkrtcA"
+      ],
+      "expected_answer_contains": [
+        "251"
+      ],
+      "notes": "251 churn events in Q4 2025 — also stated in Churn Initiative"
+    },
+    {
+      "id": "q24",
+      "query": "What percentage of total MRR comes from Enterprise accounts?",
+      "category": "tabular_statistical",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1TR0SQdI_1UUagPUD8MiWGvvqvaFWD4HHIiZMVeAqhHE",
+        "1wVxtMwE-OIrn_Rm6tj0ByW2z91BHjL65BDC1XCljtNY",
+        "1mTLFWMhkX3WAPsBrn1KICu5yJtquCA4H-hAJNbtcu5M",
+        "18MumwC8huImSD1qlqf-FqqH7hSDov34RlCeWH0Sk5o0"
+      ],
+      "expected_answer_contains": [
+        "72",
+        "73"
+      ],
+      "notes": "Enterprise is 72.7% of total MRR in Dec 2025 — also in Board Deck and Dec 6 Sync"
+    },
+    {
+      "id": "q25",
+      "query": "Which month had the worst CSAT score in 2025?",
+      "category": "tabular_statistical",
+      "difficulty": "hard",
+      "expected_doc_ids": [
+        "1mDvAxo0IaUmZ5rQBMyiunWbvglJP7C1Bv69WlhFbu-c"
+      ],
+      "expected_answer_contains": [
+        "March",
+        "3.73"
+      ],
+      "notes": "March 2025 had worst CSAT at 3.73"
+    },
+    {
+      "id": "q26",
+      "query": "What's the total refund amount for Q4 2025?",
+      "category": "tabular_statistical",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1UX81RvQydpIZTQlAxSsvGRRZ23550j01xYbMOFWr3tg",
+        "1mTLFWMhkX3WAPsBrn1KICu5yJtquCA4H-hAJNbtcu5M"
+      ],
+      "expected_answer_contains": [
+        "3,710",
+        "3710"
+      ],
+      "notes": "Q4 2025 refunds = $3,710.32 — also in Board Deck"
+    },
+    {
+      "id": "q27",
+      "query": "Show me the product requirements document",
+      "category": "paraphrase",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1hCeLvIUGYZXFmR5JngoAXkWanIkC8vj6Jjb-zSQ0Rzc",
+        "1IFFem_m3ZYC0HqgRP44l-l70U69_FaNEZkSPpkZh5GU"
+      ],
+      "expected_answer_contains": [
+        "Data Export",
+        "roadmap"
+      ],
+      "notes": "PRD should map to Data Export PRD and possibly Roadmap"
+    },
+    {
+      "id": "q28",
+      "query": "What's our competitive positioning?",
+      "category": "paraphrase",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1xgkXyRkoRS1xnp8fMXnLW8X00DTdvwEbvQqHiecGPRo",
+        "1NhlGiudITCjm89bSoGxXoch-xJMbJB3XS55zf08hd0o"
+      ],
+      "expected_answer_contains": [
+        "AcmeSaaS",
+        "NimbusApp"
+      ],
+      "notes": "Competitive positioning paraphrases to competitor analysis docs"
+    },
+    {
+      "id": "q29",
+      "query": "Show me the revenue dashboard",
+      "category": "paraphrase",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1TR0SQdI_1UUagPUD8MiWGvvqvaFWD4HHIiZMVeAqhHE"
+      ],
+      "expected_answer_contains": [
+        "MRR"
+      ],
+      "notes": "'Revenue dashboard' should map to MRR & Subscription Dashboard"
+    },
+    {
+      "id": "q30",
+      "query": "What's our customer retention situation?",
+      "category": "paraphrase",
+      "difficulty": "hard",
+      "expected_doc_ids": [
+        "17i7gismezP8b5O_SI_vSjA3U1rz4B69pSt3vTLiKBeo",
+        "1KxKeS04AXhg3CbxwKSsgekgiUlh8qZ59EJj2RYkrtcA",
+        "1zpU6wjy_0aIU0pq9VsnShWU9RmAs25lEmnSLU4AkqeU"
+      ],
+      "expected_answer_contains": [
+        "churn",
+        "retention"
+      ],
+      "notes": "Retention paraphrases to NRR, churn initiative, and health score docs"
+    },
+    {
+      "id": "q31",
+      "query": "Find the user interview findings",
+      "category": "paraphrase",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1S2T8I9cm17sz5OVPbnJkEVwAepE03EnF4xSRTJZJNQM",
+        "15fG6_XOvxG2CHBYrv03sB5sOln2OqP1ZkDGc61M8cS0",
+        "1TdqFG48YTjWFPL7Ib2pyDlkNik68q-zB_Ei0yaGViRk"
+      ],
+      "expected_answer_contains": [
+        "user research",
+        "interview"
+      ],
+      "notes": "'User interview findings' should map to the 3 user research docs"
+    },
+    {
+      "id": "q32",
+      "query": "How do our AI features affect churn?",
+      "category": "cross_document",
+      "difficulty": "hard",
+      "expected_doc_ids": [
+        "1D25sBy7wtQMpiuqVre4N_Cdlj5fk1uX1P5ABaYRm3KU",
+        "1KxKeS04AXhg3CbxwKSsgekgiUlh8qZ59EJj2RYkrtcA",
+        "1NI6hjMvgfeYpJWxRlIh3cPbIgOlZaZazN3lzINbtQeI",
+        "1zpU6wjy_0aIU0pq9VsnShWU9RmAs25lEmnSLU4AkqeU"
+      ],
+      "expected_answer_contains": [
+        "AI Copilot",
+        "error rate",
+        "features"
+      ],
+      "notes": "Requires connecting: beta error rates + feature churn reason + Nov sync discussion. Health Score has AI adoption vs churn analysis."
+    },
+    {
+      "id": "q33",
+      "query": "What's the relationship between support tickets and churn?",
+      "category": "cross_document",
+      "difficulty": "hard",
+      "expected_doc_ids": [
+        "1zpU6wjy_0aIU0pq9VsnShWU9RmAs25lEmnSLU4AkqeU",
+        "1KxKeS04AXhg3CbxwKSsgekgiUlh8qZ59EJj2RYkrtcA",
+        "1mDvAxo0IaUmZ5rQBMyiunWbvglJP7C1Bv69WlhFbu-c"
+      ],
+      "expected_answer_contains": [
+        "3+",
+        "urgent",
+        "4x"
+      ],
+      "notes": "Health score doc shows 3+ urgent tickets = 4x churn rate"
+    },
+    {
+      "id": "q34",
+      "query": "What progress was made on action items between the October and December sync meetings?",
+      "category": "cross_document",
+      "difficulty": "hard",
+      "expected_doc_ids": [
+        "1hUijXr-VGgBMTOGqdJb8C3WRRbHHyV8g6WTpkD1LkeI",
+        "1NI6hjMvgfeYpJWxRlIh3cPbIgOlZaZazN3lzINbtQeI",
+        "18MumwC8huImSD1qlqf-FqqH7hSDov34RlCeWH0Sk5o0"
+      ],
+      "expected_answer_contains": [
+        "AI Search",
+        "Video Conferencing"
+      ],
+      "notes": "Tracks action items across 3 meeting docs"
+    },
+    {
+      "id": "q35",
+      "query": "How does our Enterprise account distribution compare across verticals and what are the retention risks?",
+      "category": "cross_document",
+      "difficulty": "hard",
+      "expected_doc_ids": [
+        "1wVxtMwE-OIrn_Rm6tj0ByW2z91BHjL65BDC1XCljtNY",
+        "1TdqFG48YTjWFPL7Ib2pyDlkNik68q-zB_Ei0yaGViRk",
+        "1KxKeS04AXhg3CbxwKSsgekgiUlh8qZ59EJj2RYkrtcA"
+      ],
+      "expected_answer_contains": [
+        "FinTech",
+        "DevTools",
+        "154"
+      ],
+      "notes": "Requires enterprise data + persona insights + churn context"
+    },
+    {
+      "id": "q36",
+      "query": "What do power users think about the Data Export feature and what's planned?",
+      "category": "cross_document",
+      "difficulty": "hard",
+      "expected_doc_ids": [
+        "15fG6_XOvxG2CHBYrv03sB5sOln2OqP1ZkDGc61M8cS0",
+        "1hCeLvIUGYZXFmR5JngoAXkWanIkC8vj6Jjb-zSQ0Rzc"
+      ],
+      "expected_answer_contains": [
+        "JSON",
+        "API",
+        "3,306"
+      ],
+      "notes": "Power user interviews mention data export needs, PRD has the plan"
+    },
+    {
+      "id": "q37",
+      "query": "What are all the 2026 strategic priorities mentioned across documents?",
+      "category": "cross_document",
+      "difficulty": "hard",
+      "expected_doc_ids": [
+        "1IFFem_m3ZYC0HqgRP44l-l70U69_FaNEZkSPpkZh5GU",
+        "1KxKeS04AXhg3CbxwKSsgekgiUlh8qZ59EJj2RYkrtcA",
+        "1o9yECHFx-kQy_Sam7hWczKbDIhh1aQPCjUkYiX7IN20"
+      ],
+      "expected_answer_contains": [
+        "churn",
+        "AI",
+        "international"
+      ],
+      "notes": "Multiple docs reference 2026 priorities — tests cross-doc synthesis"
+    },
+    {
+      "id": "q38",
+      "query": "Compare 2024 and 2025 MRR performance year-over-year",
+      "category": "cross_document",
+      "difficulty": "hard",
+      "expected_doc_ids": [
+        "1TR0SQdI_1UUagPUD8MiWGvvqvaFWD4HHIiZMVeAqhHE",
+        "1ggagGDL6eBE6jB5hqaX_gXyfro3ua2DreKr6SkTZ34U"
+      ],
+      "expected_answer_contains": [
+        "4,684",
+        "273",
+        "279,863",
+        "2,273"
+      ],
+      "notes": "Requires pulling from both MRR sheets for YoY comparison"
+    },
+    {
+      "id": "q39",
+      "query": "What's our AWS infrastructure cost?",
+      "category": "negative",
+      "difficulty": "easy",
+      "expected_doc_ids": [],
+      "expected_answer_contains": [],
+      "notes": "No AWS cost data in any document — should say not found"
+    },
+    {
+      "id": "q40",
+      "query": "What's the company's vacation policy?",
+      "category": "negative",
+      "difficulty": "easy",
+      "expected_doc_ids": [],
+      "expected_answer_contains": [],
+      "notes": "No vacation policy doc — should gracefully say not found"
+    },
+    {
+      "id": "q41",
+      "query": "What are the contract terms with our data center provider?",
+      "category": "negative",
+      "difficulty": "medium",
+      "expected_doc_ids": [],
+      "expected_answer_contains": [],
+      "notes": "No vendor/supplier contract docs exist — legal/procurement territory not covered in the corpus"
+    },
+    {
+      "id": "q42",
+      "query": "What are the Kubernetes deployment configurations?",
+      "category": "negative",
+      "difficulty": "easy",
+      "expected_doc_ids": [],
+      "expected_answer_contains": [],
+      "notes": "No Kubernetes/deployment config in any doc"
+    },
+    {
+      "id": "q43",
+      "query": "What was the outcome of the Series B fundraise?",
+      "category": "negative",
+      "difficulty": "medium",
+      "expected_doc_ids": [],
+      "expected_answer_contains": [],
+      "notes": "No fundraising outcome doc — investor FAQ exists but no Series B specifics"
+    },
+    {
+      "id": "q44",
+      "query": "Strategy documents",
+      "category": "vague_broad",
+      "difficulty": "hard",
+      "expected_doc_ids": [
+        "1IFFem_m3ZYC0HqgRP44l-l70U69_FaNEZkSPpkZh5GU",
+        "1xgkXyRkoRS1xnp8fMXnLW8X00DTdvwEbvQqHiecGPRo",
+        "1o9yECHFx-kQy_Sam7hWczKbDIhh1aQPCjUkYiX7IN20",
+        "1KxKeS04AXhg3CbxwKSsgekgiUlh8qZ59EJj2RYkrtcA"
+      ],
+      "expected_answer_contains": [],
+      "notes": "Broad query — should surface strategic docs (roadmap, competitor, pricing, churn initiative)"
+    },
+    {
+      "id": "q45",
+      "query": "Recent meeting notes",
+      "category": "vague_broad",
+      "difficulty": "hard",
+      "expected_doc_ids": [
+        "18MumwC8huImSD1qlqf-FqqH7hSDov34RlCeWH0Sk5o0",
+        "1NI6hjMvgfeYpJWxRlIh3cPbIgOlZaZazN3lzINbtQeI",
+        "1hUijXr-VGgBMTOGqdJb8C3WRRbHHyV8g6WTpkD1LkeI"
+      ],
+      "expected_answer_contains": [
+        "sync",
+        "meeting"
+      ],
+      "notes": "Should surface product-eng sync notes, possibly all-hands"
+    },
+    {
+      "id": "q46",
+      "query": "Analytics and metrics",
+      "category": "vague_broad",
+      "difficulty": "hard",
+      "expected_doc_ids": [
+        "1TR0SQdI_1UUagPUD8MiWGvvqvaFWD4HHIiZMVeAqhHE",
+        "1ap9K3RCYJk-Xd8_2grchL2z4kLJMNHp4E5qX9u6ICUI",
+        "1mDvAxo0IaUmZ5rQBMyiunWbvglJP7C1Bv69WlhFbu-c",
+        "1UX81RvQydpIZTQlAxSsvGRRZ23550j01xYbMOFWr3tg"
+      ],
+      "expected_answer_contains": [],
+      "notes": "Broad query — should surface data-heavy sheets"
+    },
+    {
+      "id": "q47",
+      "query": "User research",
+      "category": "vague_broad",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1S2T8I9cm17sz5OVPbnJkEVwAepE03EnF4xSRTJZJNQM",
+        "15fG6_XOvxG2CHBYrv03sB5sOln2OqP1ZkDGc61M8cS0",
+        "1TdqFG48YTjWFPL7Ib2pyDlkNik68q-zB_Ei0yaGViRk"
+      ],
+      "expected_answer_contains": [
+        "research",
+        "interview"
+      ],
+      "notes": "Should match all 3 user research docs"
+    },
+    {
+      "id": "q48",
+      "query": "AI features",
+      "category": "vague_broad",
+      "difficulty": "medium",
+      "expected_doc_ids": [
+        "1D25sBy7wtQMpiuqVre4N_Cdlj5fk1uX1P5ABaYRm3KU",
+        "1IFFem_m3ZYC0HqgRP44l-l70U69_FaNEZkSPpkZh5GU",
+        "1aHtZFQ73PoimpgCVRrmc87a2ROIBB4nrD-KLp0rytZI"
+      ],
+      "expected_answer_contains": [
+        "AI"
+      ],
+      "notes": "Broad — multiple docs mention AI features. Beta deep dive most relevant."
+    },
+    {
+      "id": "q49",
+      "query": "What's the NimbusApp competitive threat to our DevTools accounts?",
+      "category": "cross_document",
+      "difficulty": "hard",
+      "expected_doc_ids": [
+        "1NhlGiudITCjm89bSoGxXoch-xJMbJB3XS55zf08hd0o",
+        "1wVxtMwE-OIrn_Rm6tj0ByW2z91BHjL65BDC1XCljtNY",
+        "1JF8fRdqP6YN0wEsH1b3DYdFt9-RARb-3vLo17I-5aL4"
+      ],
+      "expected_answer_contains": [
+        "NimbusApp",
+        "DevTools",
+        "113"
+      ],
+      "notes": "NimbusApp targets DevTools (113 accounts, 35 Enterprise) — requires connecting competitor analysis + account data"
+    },
+    {
+      "id": "q50",
+      "query": "How should we improve onboarding for Enterprise customers?",
+      "category": "cross_document",
+      "difficulty": "hard",
+      "expected_doc_ids": [
+        "1S2T8I9cm17sz5OVPbnJkEVwAepE03EnF4xSRTJZJNQM",
+        "1TdqFG48YTjWFPL7Ib2pyDlkNik68q-zB_Ei0yaGViRk",
+        "1V1PJokVLNGGl6HLvLFhtlXEt5HOSL7X2CdQHjX-98nA"
+      ],
+      "expected_answer_contains": [
+        "onboarding",
+        "vertical",
+        "role"
+      ],
+      "notes": "Requires connecting onboarding research + enterprise persona insights + CS playbook"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "sql-01",
+    "query": "How many accounts are on the Enterprise plan?",
+    "expected_mode": "sql",
+    "result_type": "scalar",
+    "expected_value": 154,
+    "tolerance_rel": 0,
+    "expected_tables": ["accounts"]
+  },
+  {
+    "id": "sql-02",
+    "query": "What's the average MRR across all active subscriptions?",
+    "expected_mode": "sql",
+    "result_type": "scalar",
+    "expected_value": 2250.69,
+    "tolerance_rel": 0.02,
+    "expected_tables": ["subscriptions"]
+  },
+  {
+    "id": "sql-03",
+    "query": "Break down account count by industry, descending.",
+    "expected_mode": "sql",
+    "result_type": "table",
+    "min_rows": 3,
+    "expected_tables": ["accounts"]
+  },
+  {
+    "id": "sql-04",
+    "query": "What's the churn rate by plan tier? Show as a percentage.",
+    "expected_mode": "sql",
+    "result_type": "table",
+    "min_rows": 3,
+    "expected_tables": ["accounts", "churn_events"]
+  },
+  {
+    "id": "sql-05",
+    "query": "Which 5 features are used most by Enterprise accounts?",
+    "expected_mode": "sql",
+    "result_type": "table",
+    "min_rows": 5,
+    "expected_tables": ["accounts", "subscriptions", "feature_usage"]
+  },
+  {
+    "id": "sql-06",
+    "query": "How many open support tickets are there?",
+    "expected_mode": "sql",
+    "result_type": "scalar",
+    "expected_value": 0,
+    "tolerance_rel": 0,
+    "expected_tables": ["support_tickets"]
+  },
+  {
+    "id": "sql-07",
+    "query": "Of accounts that churned citing pricing, what does their feedback say?",
+    "expected_mode": "hybrid",
+    "result_type": "table",
+    "min_rows": 1,
+    "expected_tables": ["churn_events", "accounts"]
+  },
+  {
+    "id": "sql-08",
+    "query": "What does our product retention strategy doc recommend?",
+    "expected_mode": "vector",
+    "result_type": "vector",
+    "expected_tables": []
+  }
+]

@@ -1,0 +1,22 @@
+project_id = "rdppfdfkocgvrfggmmpu"
+
+[auth]
+site_url = "http://localhost:5173"
+additional_redirect_urls = ["http://localhost:5173/**", "http://localhost:5173/auth/callback"]
+
+[auth.external.google]
+enabled = true
+client_id = "env(GOOGLE_CLIENT_ID)"
+secret = "env(GOOGLE_CLIENT_SECRET)"
+
+[functions.store-oauth-tokens]
+verify_jwt = false
+
+[functions.index-documents]
+verify_jwt = false
+
+[functions.search-documents]
+verify_jwt = false
+
+[functions.delete-account]
+verify_jwt = false

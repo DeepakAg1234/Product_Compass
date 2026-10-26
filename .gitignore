@@ -1,0 +1,56 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vercel
+
+# Local secrets — copy from .env.example, never commit
+.env
+.env.local
+
+# Eval secrets and results
+evals/.env
+evals/results/*.json
+
+# Eval data (CSV datasets, not code)
+evals/data/
+.env.evals
+
+# Demo media, decks, and generated charts at repo root (large binaries / artifacts — not code)
+/*.mp4
+/*.mov
+/*.pptx
+/*.pdf
+/*.png
+/*.jpg
+/*.jpeg
+/*.csv
+/eval-chart.html
+/rag-pipeline-diagram.html
+
+# Personal build notes — contains live API keys, never commit
+BUILD_GUIDE.md
+
+# Local Supabase CLI cache
+supabase/.temp/
+
