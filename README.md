@@ -92,6 +92,6 @@ evals/           RAG eval framework (Deno harness)
 ## Status / notes
 
 - **Deployed search config:** vector + query expansion. Hybrid (keyword + RRF) and Cohere reranking were tested but not shipped — reranking hurt domain relevance in every configuration. The `fts` column and `keyword_search` RPC remain in the schema but are not called by current code.
-- **Latest eval run (50-query golden set, query-expansion config):** Recall@5 78.7%, Precision@5 57.6%, MRR 79.7%, Factual Containment 75.0%, Citation Accuracy 80.0%, LLM-judge 4.0/5, ~5.3s avg latency. Weakest categories: paraphrase and vague/broad queries (~47% recall). See `evals/results/`.
-- **Test data:** a fictional SaaS company ("RavenStack") built from a public Kaggle churn dataset, date-shifted and expanded into ~50 synthetic Drive documents via Google Apps Script (`evals/apps-script/`).
+- **Eval (50-query golden set, as published in the app):** Recall@5 78.8%, Precision@5 63.4%, MRR 81.2%, Faithfulness 4.8/5, ~6s average response, ~11s P95 latency.
+- **Test data:** a fictional SaaS company ("RavenStack") built from a public Kaggle churn dataset, date-shifted and expanded into 50 synthetic Drive documents via Google Apps Script (`evals/apps-script/`).
 - All Drive scopes are read-only.
