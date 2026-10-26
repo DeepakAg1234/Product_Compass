@@ -2,7 +2,8 @@
 
 AI knowledge assistant for Product Managers. Connects to Google Drive, then answers natural-language questions with cited, grounded answers — combining semantic (vector) search over documents with text-to-SQL over your tabular data.
 
-**Live:** [pmcompass.vercel.app](https://pmcompass.vercel.app)
+**Live:** https://product-compass-nu.vercel.app/
+
 
 > This is **v2** — a dark-premium redesign (Vercel/Raycast aesthetic) with a text-to-SQL path added on top of the original RAG search.
 
